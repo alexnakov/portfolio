@@ -4,11 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proj1</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function test1(el) {
+    const answer1 = el.getElementsByTagName('answer')[0]
+    answer1.classList.remove('hidden')
+    answer1.classList.add('block')
+  }
+  </script>
+  <style>
+    .bor {
+      border: 1px solid black;
+    }
+    .out1b {
+      outline: 1px solid black;
+    }
+  </style>
 </head>
 <body>
   <div>
-    <a href="index.html">Home</a>
+    <a href="index.html">Back to <u>Home</u></a>
   </div>
-  <div>Proj1</div>
+  <h1>ITF tennis tournaments travel costs extension.</h1>
+  <h2>Video demonstration</h2>
+  <vid-container class="block w-full my-4">
+    <video class="m-auto px-3" width="100%" height="auto" controls>
+      <source src="movie.mp4" type="video/mp4">
+      <source src="movie.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+    </video>  
+  </vid-container>
+  <p>The repository for the front-end code can be found pubicly available at <a href="#" class="text-slate-500">github.com/alexnakov</a> whereas the backend code can be found at <a href="#" class="text-slate-500">github.com/alexnakov</a></p>
+  <h4>Project Q&A</h4>
+  <div class="w-full bor" onclick="test1(this)">
+    <question class="block bor flex justify-between ">
+      How did you do the project?
+      <div class="mr-4">H</div>
+    </question>
+    <answer class="block bor hidden">
+      I used mozilla about:debugging with manifesto.json files
+    </answer>
+  </div>
 </body>
 </html>
