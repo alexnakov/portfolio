@@ -8,8 +8,14 @@
   <script>
     function test1(el) {
     const answer1 = el.getElementsByTagName('answer')[0]
-    answer1.classList.remove('hidden')
-    answer1.classList.add('block')
+    if (answer1.classList.contains('hidden')) {
+      answer1.classList.remove('hidden')
+      answer1.classList.add('block')
+    } else {
+      answer1.classList.remove('block')
+      answer1.classList.add('hidden')
+    }
+    
   }
   </script>
   <style>
@@ -36,12 +42,33 @@
   </vid-container>
   <p>The repository for the front-end code can be found pubicly available at <a href="#" class="text-slate-500">github.com/alexnakov</a> whereas the backend code can be found at <a href="#" class="text-slate-500">github.com/alexnakov</a></p>
   <h4>Project Q&A</h4>
+  <!-- Question 1 -->
   <div class="w-full bor" onclick="test1(this)">
-    <question class="block bor flex justify-between ">
+    <question class="block bor flex justify-between pl-4 py-1">
       How did you do the project?
       <div class="mr-4">H</div>
     </question>
-    <answer class="block bor hidden">
+    <answer class="block bor hidden pl-4 py-1">
+      I used mozilla about:debugging with manifesto.json files
+    </answer>
+  </div>
+  <!-- Question 2 -->
+  <div class="w-full bor" onclick="test1(this)">
+    <question class="block bor flex justify-between pl-4 py-1">
+      How did you do the project?
+      <div class="mr-4">H</div>
+    </question>
+    <answer class="block bor hidden pl-4 py-1">
+      I used mozilla about:debugging with manifesto.json files
+    </answer>
+  </div>
+  <!-- Question 3 -->
+  <div class="w-full bor" onclick="test1(this)">
+    <question class="block bor flex justify-between pl-4 py-1">
+      How did you do the project?
+      <div class="mr-4">H</div>
+    </question>
+    <answer class="block bor hidden pl-4 py-1">
       I used mozilla about:debugging with manifesto.json files
     </answer>
   </div>
