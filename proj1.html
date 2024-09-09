@@ -7,13 +7,17 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     function test1(el) {
-    const answer1 = el.getElementsByTagName('answer')[0]
+      /* It shows the answer of the question and changes the triangle */
+      const answer1 = el.getElementsByTagName('answer')[0]
+      const triangle = el.getElementsByTagName('div')[0]
     if (answer1.classList.contains('hidden')) {
       answer1.classList.remove('hidden')
       answer1.classList.add('block')
+      triangle.innerHTML = '&#x25BC'
     } else {
       answer1.classList.remove('block')
       answer1.classList.add('hidden')
+      triangle.innerHTML = '&#9664'
     }
     
   }
